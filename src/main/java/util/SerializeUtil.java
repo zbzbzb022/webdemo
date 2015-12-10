@@ -29,9 +29,9 @@ public class SerializeUtil {
 			ObjectInputStream ois = new ObjectInputStream(bais);
 			return ois.readObject();
 		} catch (IOException e) {
-			throw new RuntimeException();
+			throw new RuntimeException("对象序列化失败");
 		} catch (ClassNotFoundException e) {
-			throw new RuntimeException();
+			throw new RuntimeException("序列化类找不到");
 		}
 	}
 
